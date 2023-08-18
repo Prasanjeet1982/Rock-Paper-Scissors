@@ -1,0 +1,29 @@
+Let's break down the Rock-Paper-Scissors game code and explain each part step by step:
+
+1. **Importing Dependencies:**
+   - The code starts by importing the necessary dependencies: `random` for generating random choices and `FastAPI` for building the API.
+
+2. **Game Logic Functions:**
+   - `determine_winner(player_choice, computer_choice)` compares the player's and computer's choices to determine the winner based on the rules of the game.
+   - `get_computer_choice()` returns a random choice for the computer (rock, paper, or scissors).
+
+3. **FastAPI Application:**
+   - `app = FastAPI()` creates the FastAPI application instance.
+
+4. **Root Endpoint (`/`):**
+   - This endpoint responds to a GET request at the root URL (`/`) and returns a welcome message.
+
+5. **Play Endpoint (`/play/{player_choice}`):**
+   - This endpoint responds to a POST request at the `/play/{player_choice}` URL and handles playing the Rock-Paper-Scissors game.
+   - The player provides their choice (rock, paper, or scissors) in the URL.
+   - The `play_game()` function validates the player's choice, gets the computer's choice, determines the winner, and returns the result.
+
+6. **Running the Application:**
+   - The code block under `if __name__ == "__main__":` runs the FastAPI application using the Uvicorn server.
+   - The application will be accessible at `http://localhost:8000`.
+
+7. **Overall:**
+   - The code simulates a Rock-Paper-Scissors game API where players can choose their option and receive the game's outcome.
+   - The API provides a straightforward user interface for playing the game via API requests.
+
+You can run the code, access the API endpoints using a web browser or API client (such as `curl` or Postman), and see how the Rock-Paper-Scissors game works using the FastAPI framework.
